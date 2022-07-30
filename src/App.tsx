@@ -13,6 +13,11 @@ const App: React.FC = () => {
       name: "test",
       addedAt: new Date(),
       isDone: false,
+      customStyle: {
+        background: "red",
+        border: "1px solid blue",
+        hoverColor: "green",
+      },
     },
     {
       id: 1,
