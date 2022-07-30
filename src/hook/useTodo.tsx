@@ -1,12 +1,18 @@
 import React from "react";
 
-interface Props {}
-
 export const useTodo = (
-  setTodo: React.Dispatch<React.SetStateAction<Todo[]>>
+  setTodo: React.Dispatch<React.SetStateAction<ITodo[]>>
 ) => {
-  const addTodo = (newTodo: Todo) => {
-    setTodo((prev) => [...prev, newTodo]);
+  const addTodo = (name: string, customStyle?: undefined) => {
+    setTodo((prev) => [
+      ...prev,
+      {
+        id: prev.length + 1,
+        name,
+        addedAt: new Date(),
+        isDone: false,
+      },
+    ]);
   };
 
   const removeTodo = (removeTodoId: number) => {

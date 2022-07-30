@@ -1,8 +1,8 @@
 import React from "react";
 
 interface IGlobalContext {
-  todos: Todo[];
-  addTodo: (newTodo: Todo) => void;
+  todos: ITodo[];
+  addTodo: (name: string, customStyle?: undefined) => void;
   removeTodo: (removeTodoId: number) => void;
   toggleTodo: (toggleId: number) => void;
 }

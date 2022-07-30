@@ -1,3 +1,36 @@
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+  padding: 0px 5px;
+}
+
+.left-view {
+  width: 70%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.right-view {
+  width: 30%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+/* ANCHOR Todo */
+.todo {
+  height: 50px;
+  width: 300px;
+  padding: 0px 10px;
+  margin: 5px 20px;
+  background: rgb(131, 200, 228);
+  border: 2px solid skyblue;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo:hover {
+  background-color: rgb(181, 222, 239);
 }

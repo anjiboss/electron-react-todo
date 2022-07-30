@@ -1,4 +1,4 @@
-interface Todo {
+interface ITodo {
   id: number;
   name: string;
   isDone: boolean;
