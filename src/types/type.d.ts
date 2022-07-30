@@ -2,6 +2,7 @@ interface CustomTodoStyle {
   background?: string;
   border?: string;
   hoverColor?: string;
+  borderWidth?: number;
 }
 
 interface ITodo {

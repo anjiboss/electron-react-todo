@@ -1,4 +1,4 @@
-import React, { CSSProperties, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { defaults } from "../config/constants";
 import { GlobalContext } from "../context/GlobalContext";
 
@@ -39,7 +39,9 @@ const SingleTodo: React.FC<{ todo: ITodo }> = ({ todo }) => {
       className="todo"
       style={{
         background,
-        border: todo.customStyle?.border || defaults.DEFAULT_TODO_BORDER,
+        border: todo.customStyle?.border
+          ? `1px solid ${todo.customStyle?.border}`
+          : defaults.DEFAULT_TODO_BORDER,
       }}
       onMouseOver={
         todo.customStyle?.hoverColor

@@ -1,4 +1,5 @@
 export const defaults = {
-  DEFAULT_TODO_BG: "rgb(131, 200, 228)",
-  DEFAULT_TODO_BORDER: "skyblue",
+  DEFAULT_TODO_BG: "#83c8e4",
+  DEFAULT_TODO_BORDER: "#87ceeb",
+  DEFAULT_TODO_HOVER: "#b5deef",
 };

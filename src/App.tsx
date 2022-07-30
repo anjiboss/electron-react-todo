@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "style/App.css";
+import "react-toastify/dist/ReactToastify.min.css";
 import LeftView from "./Components/LeftView";
 import RightView from "./Components/RightView";
 import TodoApp from "./Components/Todo";
 import { GlobalContext } from "./context/GlobalContext";
 import { useTodo } from "./hook/useTodo";
+import { ToastContainer } from "react-toastify";
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([
@@ -13,11 +15,6 @@ const App: React.FC = () => {
       name: "test",
       addedAt: new Date(),
       isDone: false,
-      customStyle: {
-        background: "red",
-        border: "1px solid blue",
-        hoverColor: "green",
-      },
     },
     {
       id: 1,
@@ -43,6 +40,7 @@ const App: React.FC = () => {
         toggleTodo,
       }}
     >
+      <ToastContainer />
       <div className="App">
         <LeftView>
           <TodoApp todos={todos} />

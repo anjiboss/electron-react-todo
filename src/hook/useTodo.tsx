@@ -3,7 +3,7 @@ import React from "react";
 export const useTodo = (
   setTodo: React.Dispatch<React.SetStateAction<ITodo[]>>
 ) => {
-  const addTodo = (name: string, customStyle?: undefined) => {
+  const addTodo = (name: string, customStyle?: CustomTodoStyle) => {
     setTodo((prev) => [
       ...prev,
       {
@@ -11,6 +11,7 @@ export const useTodo = (
         name,
         addedAt: new Date(),
         isDone: false,
+        customStyle,
       },
     ]);
   };
